@@ -1,7 +1,8 @@
 import { io } from 'socket.io-client';
 
-// Fetch socket URL from environment variables, fallback to window.location.origin
-const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || 'http://localhost:3001';
+// In production (Render), the Socket.io server runs on the same origin.
+// In development, you can override with VITE_SOCKET_URL.
+const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || window.location.origin;
 
 console.log(`Initializing socket connection to: ${SOCKET_URL}`);
 
