@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
+    "dev": "npx vite",
+    "build": "npx vite build",
+    "preview": "npx vite preview",
     "postinstall": "npm run build",
     "start": "node server.js"
   },
@@ -16,7 +16,8 @@
     "socket.io-client": "^4.7.5",
     "socket.io": "^4.7.5",
     "express": "^4.21.1",
-    "cors": "^2.8.5"
+    "cors": "^2.8.5",
+    "vite": "^5.3.1"
   },
   "engines": {
     "node": ">=18 <23"
