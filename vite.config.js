@@ -6,6 +6,14 @@ export default defineConfig({
   base: './',
 
   plugins: [react()],
+  server: {
+    proxy: {
+      '/socket.io': {
+        target: 'http://localhost:3001',
+        ws: true
+      }
+    }
+  },
   build: {
     rollupOptions: {
       input: {
